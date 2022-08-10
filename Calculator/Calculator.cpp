@@ -1,56 +1,54 @@
 // Calculator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
 // class definition
 class Calculator
 {
-public:
-    int a, b;
+    public:
+        int a, b;
 
-    int add_no()
-    {
-        return a + b;
-    }
-    int sub_no()
-    {
-        return a - b;
-    }
-    int div_no()
-    {
-        return a / b;
-    }
-    int mul_no()
-    {
-        return a * b;
-    }
-
-
+        inline int add_no()
+        {
+            return a + b;
+        }
+        inline int sub_no()
+        {
+            return a - b;
+        }
+        inline int div_no()
+        {
+            return a / b;
+        }
+        inline int mul_no()
+        {
+            return a * b;
+        }
 };
 
 // main function
 int main()
 {
-    Calculator o;
+    Calculator calc;
 
     // accessing public datamember outside class
-    cout << "Enter first no: " << "\n";
-    cin >> o.a;
-    cout << "Enter Second no: " << "\n";
-    cin >> o.b;
+    cout << "Enter first number: " << "\n";
+    cin >> calc.a;
+    cout << "Enter second number: " << "\n";
+    cin >> calc.b;
 
-    cout << "first no is: " << o.a << "\n";
-    cout << "second no is: " << o.b << "\n";
+    cout << "First number is: " << calc.a << "\n";
+    cout << "Second number is: " << calc.b << "\n";
 
-    cout << "Addition is: " << o.add_no() << "\n";
-    cout << "Subtraction is: " << o.sub_no() << "\n";
-    cout << "multiplication is: " << o.mul_no() << "\n";
-    cout << "division is: " << o.div_no();
+    cout << "Addition is: " << calc.add_no() << "\n";
+    cout << "Subtraction is: " << calc.sub_no() << "\n";
+    cout << "Multiplication is: " << calc.mul_no() << "\n";
+    cout << "Division is: " << calc.div_no();
+
     return 0;
 }
-
-
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
